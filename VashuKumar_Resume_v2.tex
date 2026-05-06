@@ -1,0 +1,138 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{setspace}
+
+% Page margins
+\geometry{left=1.2cm, right=1.2cm, top=1.6cm, bottom=1.6cm}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+
+% Colors
+\definecolor{accent}{RGB}{33, 47, 61}
+\definecolor{lightgray}{RGB}{180,180,180}
+
+% Section formatting
+\titleformat{\section}{\color{accent}\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% Custom commands
+\newcommand{\contact}[4]{
+    \noindent
+    \faPhone\ #1 \hfill
+    \faEnvelope\ #2 \hfill
+    \faGithub\ #3 \hfill
+    \faMapMarker\ #4
+}
+
+\newcommand{\datedentry}[4]{
+    \noindent
+    \begin{minipage}[t]{0.7\textwidth}
+        \textbf{#1}\\
+        #2
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedleft
+        #3\\
+        #4
+    \end{minipage}
+}
+
+\newcommand{\projectentry}[2]{
+    \vspace{8pt}
+    \noindent
+    \begin{minipage}[t]{0.7\textwidth}
+        \textbf{#1}
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedleft
+        \textit{#2}
+    \end{minipage}
+}
+
+% Clean spacing
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*, nosep, after=\vspace{4pt}}
+
+\begin{document}
+
+%========= HEADER =========
+\begin{center}
+    {\Huge\bfseries Vashu Kumar}\\[4pt]
+\end{center}
+
+\contact{+91-8279764269}
+{\href{mailto:vashu.kumar8642@gmail.com}{vashu.kumar8642@gmail.com}}
+{\href{https://github.com/Vashu-Kumar}{github.com/Vashu-Kumar}}
+{India}
+
+%========= EDUCATION =========
+\section{EDUCATION}
+\textbf{Bachelor of Computer Applications (BCA)} \hfill 2023 -- 2026\\
+HEC Group of Institutions, Haridwar\\
+CGPA: 7.06/10
+
+\datedentry{Class XII (CBSE)}{Percentage: 77.4\%}{2023}{}
+
+
+%========= SKILLS =========
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}
+    \item \textbf{Languages:} Java, Python, JavaScript
+    \item \textbf{Frontend:} React.js, HTML, CSS, Tailwind CSS
+    \item \textbf{Backend:} Spring Boot, REST APIs
+    \item \textbf{Database:} MySQL
+    \item \textbf{Tools/Technologies:} Git, Maven, Postman, Docker, JDBC
+    \item \textbf{Core CS:} Data Structures \& Algorithms, OOP, Operating Systems
+\end{itemize}
+
+%========= PROJECTS =========
+\section{PROJECTS}
+\projectentry{\href{https://portfolio-mauve-ten-g85z459epl.vercel.app/}
+{\textcolor{blue}{Animated Portfolio Website}}}{Frontend Development}
+\textit{Tech: React.js, Tailwind CSS, JavaScript} \hfill
+\href{https://github.com/Vashu-Kumar}{GitHub} 
+\begin{itemize}
+\item Developed a high-performance, responsive portfolio website using React.js and Tailwind CSS
+\item Designed reusable and modular UI components to improve scalability and maintainability
+\item Implemented smooth animations and interactive elements to enhance user experience
+\item Optimized rendering and responsiveness for seamless performance across devices and screen sizes
+\end{itemize}
+
+\projectentry{\href{https://movie-recommender-six-kappa.vercel.app/}
+{\textcolor{blue}{Movie Recommendation System}}}{Frontend Development}
+\textit{Tech: React.js, REST APIs, Tailwind CSS} \hfill
+\href{https://github.com/Vashu-Kumar}{GitHub} 
+\begin{itemize}
+    \item Built a scalable movie recommendation web app handling 1000+ movies with dynamic data rendering
+    \item Integrated external APIs (TMDB) for real-time movie data including ratings, genres, and trending content
+    \item Implemented advanced filtering, sorting, and search functionality based on user preferences
+    \item Optimized API calls and state management to improve performance and reduce unnecessary re-renders
+\end{itemize}
+
+
+
+%========= ACHIEVEMENTS =========
+\section{ACHIEVEMENTS}
+
+\begin{itemize}
+    \item Solved 150 LeetCode problems demonstrating strong algorithmic and problem-solving skills.
+\end{itemize}
+
+%========= INTERESTS =========
+\section{INTERESTS}
+Artificial Intelligence \textbullet{} Backend Engineering \textbullet{} Distributed Systems \textbullet{} Full-Stack Development \textbullet{} Systems Programming
+
+\end{document}
